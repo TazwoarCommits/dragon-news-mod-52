@@ -1,8 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import profile from "../../assets/user.png"
 import logo from "../../assets/nav-logo.png"
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+    const {user} = useContext(AuthContext);
+    console.log(user);
+     
     const links = <>
        <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/about'>About</NavLink></li>
@@ -42,7 +47,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <img src={profile} alt="" />
-                <Link to="/auth" className="btn">Login</Link>
+                <Link to="/auth/login" className="ml-2 btn">{user ? user.email.split('@')[0] : "Login"}</Link>
             </div>
         </div>
     );

@@ -30,7 +30,7 @@ const UserLogin = () => {
                         </div>
                     </form>
                 </div>
-                <p className="mt-4">Don&apos;t have an account? <span className="text-pink-700"><Link to="auth/register">Register Now</Link></span></p>
+                <p className="mt-4">Don&apos;t have an account?<span className="text-pink-700"><Link to='/auth/register'>Register</Link></span></p>
             </div>
         </div>
     );
