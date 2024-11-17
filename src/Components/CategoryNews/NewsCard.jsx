@@ -38,7 +38,7 @@ const NewsCard = ({ singleNews }) => {
             <h2>{title}</h2>
             <figure>
                 <img
-                    className="object-fill"
+                    className="w-full"
                     src={image_url}
                     alt="Image" />
             </figure>
